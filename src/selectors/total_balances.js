@@ -1,6 +1,6 @@
 import { createSelector } from 'reselect';
 
-const total_balances = (state) => state.total_balances;
+const total_balances = (state) => state.balances;
 
 export default createSelector(
   [ total_balances ],

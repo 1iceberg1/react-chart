@@ -3,7 +3,6 @@ import React from 'react';
 import Chart from './Chart';
 import AccountList from './AccountList';
 import Repayment from './Repayment';
-import Payment from './Payment';
 
 export default () => (
   <div>

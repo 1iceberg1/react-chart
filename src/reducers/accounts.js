@@ -14,16 +14,16 @@ export default (state = initialState, action) => {
     case ADD_ACCOUNT:
       return {
         ...state,
-        accounts: accounts.push({balance: action.val}),
-        total_balance: state.total_balance + val,
-        balances: state.balances.push({state.total_balance + val})
+        accounts: state.accounts.push({balance: action.val}),
+        total_balance: state.total_balance + action.val,
+        balances: state.balances.push({amount:state.total_balance + action.val})
       };
     case PAY_MONTHLY:
       return {
         ...state,
-        monthly_payments: state.monthly_payments.push({amount: val}),
-        total_balance: state.total_balance - val,
-        balances: state.balances.push({state.total_balance - val})
+        monthly_payments: state.monthly_payments.push({amount: action.val}),
+        total_balance: state.total_balance - action.val,
+        balances: state.balances.push({amount: state.total_balance - action.val})
       };
     default:
       return state;

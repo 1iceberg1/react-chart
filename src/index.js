@@ -7,7 +7,7 @@ import rootReducer from './reducers';
 
 import App from './components/App';
 
-import './index.css';
+import './css/index.css';
 
 const store = createStore(rootReducer);
 

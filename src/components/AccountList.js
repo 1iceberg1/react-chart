@@ -10,8 +10,8 @@ export default connect(({ accounts }) => ({ accounts }))(
         <h2>Accounts</h2>
 
         <label>Amount</label>
-        <input type="text" maxLength="7" value={ initial } onChange={ e=>dispatch(actions.setBalance(e.target.value)) } />
-        <button class="btn btn-primary" onClick={e=>dispatch(actions.addAccount())}>Submit</button>
+        <input type="text" maxLength="7" value={ 100 } onChange={ e=>dispatch(actions.setBalance(e.target.value)) } />
+        <button className="btn btn-primary" onClick={e=>dispatch(actions.addAccount())}>Submit</button>
       </div>
       <div>
         { /* balances */ }

@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import { payMonthly } from '../reducers/accounts';
-import * as actions from '../reducers/accounts';
+// import * as actions from '../reducers/accounts';
 
 
 export default connect(({ monthly, repayments })=>({ monthly, repayments }))(
@@ -11,7 +11,7 @@ export default connect(({ monthly, repayments })=>({ monthly, repayments }))(
     <div>
       <h2>Initial Balance</h2>
       <label>Monthly</label>
-      <input type="text" maxLength="5" value={ monthly.monthlyPayment } onChange={ e=>dispatch(payMonthly(e.target.value)) }/>
+      <input type="text" maxLength="5" value={ 0 } onChange={ e=>dispatch(payMonthly(e.target.value)) }/>
     </div>
   </div>
 ));
